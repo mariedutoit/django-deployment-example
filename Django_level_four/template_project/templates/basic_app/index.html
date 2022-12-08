@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+<!-- Loading extra filters -->
+{% load my_extras_filters %}
+  {% block body_block %}
+    <h1>WELCOME TO INDEX</h1>
+    <h1>This is index.html page showing</h1>
+    <!-- Applyting filter transformation to my text with filter upper -->
+    <h2>{{ text|cut:"hello" }}</h2>
+    <!-- Adding 99 to my number with this filter -->
+    <h2>{{ number|add:"99" }}</h2>
+  {% endblock %}
